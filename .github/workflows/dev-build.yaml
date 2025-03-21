@@ -20,7 +20,7 @@ jobs:
 
       # Build a Docker image of your application and tag the image with the latest commit SHA
       - name: Build container image
-        run: docker build docker/Dockerfile -t ${{ secrets.DOCKER_USER }}/chatbot:dev .
+        run: docker build docker/ -t ${{ secrets.DOCKER_USER }}/chatbot:dev .
 
       # Push image to Docker Hub
       - name: Push image to Docker Hub
